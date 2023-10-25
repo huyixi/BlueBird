@@ -6,8 +6,7 @@ import Home from "@/views/Home.vue";
 const routes = [
   {
     path: "/",
-    name: "Login",
-    component: Login,
+    redirect: "/login",
   },
   {
     path: "/home",
