@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <AuthLayout>
     <section class="bg-white">
       <div class="lg:grid lg:min-h-screen lg:grid-cols-12">
         <section
@@ -193,7 +193,7 @@
 
                 <p class="mt-4 text-sm text-gray-500 sm:mt-0">
                   Already have an account?
-                  <a href="#" class="text-gray-700 underline">Log in</a>.
+                  <button @click="goToLogin">Login</button>
                 </p>
               </div>
             </form>
@@ -201,12 +201,19 @@
         </main>
       </div>
     </section>
-  </div>
+  </AuthLayout>
 </template>
 
 <script>
+import AuthLayout from "../layouts/AuthLayout.vue";
 export default {
   name: "Register",
+  components: { AuthLayout },
+  methods: {
+    goToLogin() {
+      this.$router.push("/login");
+    },
+  },
 };
 </script>
 
