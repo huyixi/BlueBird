@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "dev": "concurrently \"npm run tailwind:watch\" \"vite\"",
     "build": "vite build",
-    "dev": "vite",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "tailwind:watch": "tailwindcss -i ./src/styles.css -o ./dist/output.css --watch"
   },
   "dependencies": {
     "vue": "^3.3.4",
