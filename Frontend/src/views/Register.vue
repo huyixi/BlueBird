@@ -193,7 +193,11 @@
 
                 <p class="mt-4 text-sm text-gray-500 sm:mt-0">
                   Already have an account?
-                  <button @click="goToLogin">Login</button>
+                  <span
+                    @click="goToLogin"
+                    class="text-blue-600 underline text-base font-semibold cursor-pointer"
+                    >Login</span
+                  >
                 </p>
               </div>
             </form>
